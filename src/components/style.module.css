@@ -1,0 +1,242 @@
+:root{
+    --text-primary:#000;
+    --bgPrimary:#fff;
+    --bgSecondary: #F9F9F9;
+    --pink: #0071bd;
+    --light-blue: #e6f7ff;
+    --border: #d9d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .app{
+     display: flex;
+     overflow: hidden;
+ }
+ .navbar{
+     flex: 0.2;
+     background-color: rgb(0 , 21 , 41);
+ }
+ .main{
+     flex: 0.8;
+     width: 100%;
+ }
+ .routes{
+     padding: 20px;
+ }
+.navbarContainer{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(0 , 21 , 41);
+}
+.logoContainer{
+    background-color: #001529;
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+margin: 0 0 0 15px;
+}
+.logo a{
+    color: white !important;
+}
+.footer{
+    background-color: #001529;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    padding: 20px;
+}
+.cryptoCartContainer{
+    min-height: 65vh !important;
+}
+.cryptoImage{
+    width: 35px;
+}
+.cryptoCard{
+    min-width: 250px;
+}
+.homeHeadingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.showMore {
+    margin-top: 0 !important;
+}
+.searchCrypto{
+    margin: 20px auto 30px auto;
+    width: 250px;
+}
+.newsCard{
+    min-height: 300px !important;
+}
+.newsCard p{
+    color: black;
+}
+.newsImageContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.newsImageContainer p{
+    margin: 10px 0;
+}
+.newsImageContainer img{
+    width: 100%;
+    height: 100%;
+}
+.providerContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.providerName{
+    margin-left: 10px;
+}
+.providerContent{
+    display: flex;
+    align-items: center;
+}
+.selectNews{
+    width: 180px;
+}
+.coinDetailContainer{
+    margin: 20px;
+}
+.coinHeadingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    gap: 10px;
+}
+.coinHeadingContainer p{
+    font-size: 1rem;
+    opacity: .9;
+}
+.selectTimePeriod{
+    width: 200px;
+    margin-top: 20px !important;
+}
+.statsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.coinStats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    font-size: 1rem;
+}
+.coinStatsName{
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+}
+.stats{
+    font-weight: 700;
+}
+.coinDeskLink{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.coinDesk{
+    flex: .5;
+}
+.coinLinks{
+    padding: 0 20px;
+    flex: .5;
+}
+.coinLink{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.coinLink:hover, .coinStats:hover{
+    background-color: var(--bgSecondary);
+}
+.chartHeader{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    color: #0071bd;;
+}
+.priceContainer{
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+}
+.currentPrice{
+    margin-top: 0 !important;
+    font-weight: 900 !important;
+}
+.menuControl{
+    display: none !important;
+    position: absolute;
+    /*right: 10px;*/
+    top: 25px;
+    background-color: var(--bgSecondary) !important;
+    border: none;
+}
+ @media screen and (max-width: 800px){
+   .app{
+       flex-direction: column;
+       overflow: hidden;
+   }
+     .navbar{
+         flex:1
+     }
+     .main{
+         flex: 1 ;
+         margin-top: 70px ;
+     }
+     .navbarContainer{
+         height: 8vh;
+         position: fixed;
+         width: 100%;
+         z-index: 100;
+         background-color: var(--bgSecondary)
+     }
+     .menuControl{
+         display: block !important;
+     }
+    .antMenu{
+       position: absolute;
+        right: 0;
+    }
+    .showMore{
+        font-size: 1rem !important;
+    }
+    .homeTitle{
+        font-size: 1rem !important;
+    }
+ }
+@media screen and (max-width: 1000px){
+    .statsContainer{
+        flex-direction: column;
+    }
+    .coinDeskLink{
+        flex-direction: column;
+    }
+}
